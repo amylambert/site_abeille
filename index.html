@@ -8,10 +8,18 @@
         <script src="assets/js/IncludeHtml.js" defer></script>
     </head>
     <body>
-    <include-html source="partials/header.html"></include-html>
-    <include-html source="pages/home.html"></include-html>
-    <include-html source="pages/news.html"></include-html>
-    <include-html source="pages/recipes.html"></include-html>
-    <include-html source="partials/footer.html"></include-html>
+    <header>
+        <include-html source="partials/header.html"></include-html>
+    </header>
+
+    <main>
+        <include-html source="pages/home.html"></include-html>
+        <include-html source="pages/news.html"></include-html>
+        <include-html source="pages/recipes.html"></include-html>
+    </main>
+
+    <footer>
+        <include-html source="partials/footer.html"></include-html>
+    </footer>
     </body>
 </html>
