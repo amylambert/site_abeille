@@ -1,0 +1,46 @@
+.root {
+    --fx-text-color: #03071e;
+    --fx-text-secondary-color: #faedbd;
+
+    --fx-background-color-primary: #FFEFA0;
+    --fx-background-color-second: #FFD57E;
+    --fx-background-color-border: #FCA652;
+    --fx-header-color: #7C4A32;
+
+    --fx-button-colorBack: #7C4A32;
+    --fx-button-hover: #FCA652;
+    --fx-text-button-color: #faedbd;
+
+    --font-size-xs: 0.75rem;
+    --font-size-s: 1rem;
+    --font-size-m: 1.25rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+
+    --spacing-s: 0.5rem;
+    --spacing-m: 1rem;
+    --spacing-l: 1.5rem;
+    --spacing-xl: 2rem;
+
+    --border-radius: 25px;
+    --border-radius-btn: 17px;
+
+    --gap-s: 0.25rem;
+    --gap-m: 0.75rem;
+    --gap-l: 1rem;
+    --gap-xl: 1.5rem;
+}
+
+/* ==========================================================================
+   RESET & GLOBALS
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    color: var(--fx-text-color);
+    box-sizing: border-box;
+}
