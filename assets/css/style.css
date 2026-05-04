@@ -1,9 +1,10 @@
-.root {
+:root {
     --fx-text-color: #03071e;
     --fx-text-secondary-color: #faedbd;
 
     --fx-background-color-primary: #FFF2C9;
     --fx-background-color-second: #FFD57E;
+    --fx-shadow-box: #B08C5D;
     --fx-background-color-border: #FCA652;
     --fx-header-color: #7C4A32;
 
@@ -47,6 +48,7 @@
 
 body {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: var(--fx-background-color-primary);
@@ -202,7 +204,57 @@ li {
    ========================================================================== */
 
 header {
-    position: fixed;
+    background-color: var(--fx-header-color);
+    width: 100vw;
+    padding: var(--spacing-m);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+header > h1 {
+    color: white;
+}
+
+header > nav > a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+footer {
+    background-color: var(--fx-header-color);
+    width: 100vw;
+    padding: var(--spacing-m);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 100px;
+}
+
+footer > p {
+    color: white;
+}
+
+footer > div > a {
+    color: white;
+    text-decoration: none;
+    height: 30px;
+    align-items: center;
 }
 
 /* ==========================================================================
