@@ -2,14 +2,14 @@
     --fx-text-color: #03071e;
     --fx-text-secondary-color: #faedbd;
 
-    --fx-background-color-primary: #FFF2C9;
-    --fx-background-color-second: #FFD57E;
-    --fx-shadow-box: #B08C5D;
-    --fx-background-color-border: #FCA652;
-    --fx-header-color: #7C4A32;
+    --fx-background-color-primary: #fff2c9;
+    --fx-background-color-second: #ffd57e;
+    --fx-shadow-box: #b08c5d;
+    --fx-background-color-border: #fca652;
+    --fx-header-color: #7c4a32;
 
-    --fx-button-colorBack: #7C4A32;
-    --fx-button-hover: #FCA652;
+    --fx-button-colorBack: #7c4a32;
+    --fx-button-hover: #fca652;
     --fx-text-button-color: #faedbd;
 
     --font-size-xs: 0.75rem;
@@ -63,8 +63,6 @@ h2 {
 hr {
     margin: 20px 0;
 }
-
-
 
 /* ==========================================================================
    LAYOUT CONTAINERS

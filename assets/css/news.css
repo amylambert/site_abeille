@@ -1,0 +1,56 @@
+/* ==========================================================================
+   PAGE NEWS
+   ========================================================================== */
+
+.news-section {
+    padding: var(--spacing-xl) var(--spacing-m);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-l);
+    padding: var(--spacing-m);
+}
+
+.news-article {
+    border-color: #b08c5d;
+    transition: transform 0.2s ease;
+}
+
+.news-article:hover {
+    transform: scale(1.02);
+    border-color: var(--fx-button-hover);
+}
+
+.news-meta {
+    font-size: var(--font-size-xs);
+    color: var(--fx-header-color);
+    font-weight: bold;
+}
+
+.news-title {
+    font-size: var(--font-size-l);
+    color: #000000;
+}
+
+.news-excerpt {
+    font-size: var(--font-size-s);
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.news-read-more {
+    align-self: flex-start;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
