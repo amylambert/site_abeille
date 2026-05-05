@@ -1,27 +1,92 @@
-<section class="recipes card">
-    <h2>Sur cette page, vous pourrez trouver des recettes faites à l'aide de miel ou d'autres produits de la ruche.</h2>
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Abeille Olivetaine</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,900&display=swap"
+            rel="stylesheet"
+        />
 
-    <div class="recipe">
-        <h3>Des recettes proposées dans le cadre de la semaine "Api 'Week" 2025</h3>
-        <div>
-            <img src="" class="recipe-image">
-            <a href="">Cliquez ici pour accéder aux recettes</a>
-        </div>
-    </div>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/partials/header.css" />
+        <link rel="stylesheet" href="../assets/css/partials/footer.css" />
+        <link rel="stylesheet" href="../assets/css/recipes.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header-top">
+                <h1 id="logo">Abeille Olivetaine</h1>
+                <button id="burger-menu" aria-label="Ouvrir le menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav id="nav">
+                <a href="../index.html">Accueil</a>
+                <a href="./news.html">Les News</a>
+                <a href="./recipes.html">Recettes</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-    <div class="recipe">
-        <h3>Le pain d'épices façon Willaert</h3>
-        <div>
-            <img src="" class="recipe-image">
-            <a href="">Cliquez ici pour la recette</a>
-        </div>
-    </div>
+            <script>
+                document.addEventListener("html-includes-done", () => {
+                    const burger = document.getElementById("burger-menu");
+                    const nav = document.getElementById("nav");
 
-    <div class="recipe">
-        <h3>Une recette d'Hydromel</h3>
-        <div>
-            <img src="" class="recipe-image">
-            <a href="">Cliquez ici pour la recette</a>
-        </div>
-    </div>
-</section>
+                    if (burger && nav) {
+                        burger.addEventListener("click", () => {
+                            nav.classList.toggle("open");
+                            burger.classList.toggle("active");
+                        });
+                    }
+                });
+            </script>
+        </header>
+
+        <section class="recipes card">
+            <h2>
+                Sur cette page, vous pourrez trouver des recettes faites à
+                l'aide de miel ou d'autres produits de la ruche.
+            </h2>
+
+            <div class="recipe">
+                <h3>
+                    Des recettes proposées dans le cadre de la semaine "Api
+                    'Week" 2025
+                </h3>
+                <div>
+                    <img src="" class="recipe-image" />
+                    <a href="">Cliquez ici pour accéder aux recettes</a>
+                </div>
+            </div>
+
+            <div class="recipe">
+                <h3>Le pain d'épices façon Willaert</h3>
+                <div>
+                    <img src="" class="recipe-image" />
+                    <a href="">Cliquez ici pour la recette</a>
+                </div>
+            </div>
+
+            <div class="recipe">
+                <h3>Une recette d'Hydromel</h3>
+                <div>
+                    <img src="" class="recipe-image" />
+                    <a href="">Cliquez ici pour la recette</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Abeille olivetaine. All rights reserved.</p>
+            <div>
+                <a href="../index.html">Accueil</a>
+                <a href="./news.html">Les News</a>
+                <a href="./recipes.html">Recettes</a>
+            </div>
+        </footer>
+    </body>
+</html>

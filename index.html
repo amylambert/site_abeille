@@ -8,17 +8,217 @@
             href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,900&display=swap"
             rel="stylesheet"
         />
+
         <link rel="stylesheet" href="assets/css/style.css" />
-        <link rel="stylesheet" href="assets/css/news.css" />
-        <script src="assets/js/IncludeHtml.js" defer></script>
+        <link rel="stylesheet" href="assets/css/home.css" />
     </head>
     <body>
-        <include-html source="partials/header.html"></include-html>
+        <header>
+            <link rel="stylesheet" href="assets/css/partials/header.css" />
+            <div class="header-top">
+                <h1 id="logo">Abeille Olivetaine</h1>
+                <button id="burger-menu" aria-label="Ouvrir le menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav id="nav">
+                <a href="./index.html">Accueil</a>
+                <a href="./pages/news.html">Les News</a>
+                <a href="./pages/recipes.html">Recettes</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-        <main>
-            <include-html source="pages/news.html"></include-html>
-        </main>
+            <script>
+                document.addEventListener("html-includes-done", () => {
+                    const burger = document.getElementById("burger-menu");
+                    const nav = document.getElementById("nav");
 
-        <include-html source="partials/footer.html"></include-html>
+                    if (burger && nav) {
+                        burger.addEventListener("click", () => {
+                            nav.classList.toggle("open");
+                            burger.classList.toggle("active");
+                        });
+                    }
+                });
+            </script>
+        </header>
+
+        <section class="welcome card">
+            <div class="">
+                <h2>Bienvenue</h2>
+
+                <p>
+                    L'association <span>L'Abeille Olivetaine</span> créée en
+                    2010 à Olivet (Loiret), vous accueille sur son site internet
+                    et son rucher-école.
+                </p>
+
+                <p>
+                    Ce site Web a pour objectif de vous informer sur son
+                    rucher-école, ses formations, ses activités, ses animations,
+                    ses contributions aux manifestations locales, mais également
+                    sur l'assistance et les conseils qu'elle peut vous apporter.
+                </p>
+
+                <p>
+                    Vous pouvez adhérer à l'association en cliquant sur l'onglet
+                    <a href="adhesion.html">Adhésion</a>.
+                </p>
+            </div>
+
+            <div class="basic-container containerV">
+                <p>
+                    Les apiculteurs qui marquent leurs reines une fois
+                    fécondées, utilisent un marquage reconnu au niveau
+                    international.
+                </p>
+                <p>
+                    Même s'il devient de plus en plus rare que les reines vivent
+                    5 ans, le code couleur qui permet de connaitre leur année de
+                    naissance revient cycliquement tous les 5 ans. <br />Les
+                    chiffres de fin de l'année permettent de savoir comment
+                    identifier ses reines.
+                </p>
+                <p>
+                    Ainsi, on peut connaitre la couleur des reines pour l'année
+                    2026 en suivant cette codification.
+                </p>
+
+                <table>
+                    <tr>
+                        <th>Années se terminant par</th>
+                        <th>Couleur utilisée</th>
+                    </tr>
+                    <tr>
+                        <td>1 et 6</td>
+                        <td class="white">Blanc</td>
+                    </tr>
+                    <tr>
+                        <td>2 et 7</td>
+                        <td class="yellow">Jaune</td>
+                    </tr>
+                    <tr>
+                        <td>3 et 8</td>
+                        <td class="red">Rouge</td>
+                    </tr>
+                    <tr>
+                        <td>4 et 9</td>
+                        <td class="green">Vert</td>
+                    </tr>
+                    <tr>
+                        <td>5 et 0</td>
+                        <td class="blue">Bleu</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="basic-container containerH">
+                <p>
+                    Possesseurs de ruches, la période de déclaration obligatoire
+                    de vos ruches 2025 est désormais ouverte (depuis le
+                    01/09/2025).
+                </p>
+
+                <p>
+                    <a
+                        href="https://agriculture-portail.6tzen.fr/default/requests/Cerfa13995/"
+                        target="_blank"
+                        >Cliquez ici pour faire votre déclaration en 3 min.</a
+                    >
+                </p>
+            </div>
+
+            <div class="basic-container containerH">
+                <p>
+                    Tout apiculteur vendant son miel ou le donnant en-dehors de
+                    son cercle familial proche doit déclarer son activité et
+                    avoir un numéro de SIRET.
+                </p>
+                <p>
+                    <a href="https://procedures.inpi.fr/?/"
+                        >Obtenir un numéro SIRET</a
+                    >
+                </p>
+            </div>
+        </section>
+
+        <section class="introduction card">
+            <h2>L' Abeille Olivetaine a pour objectifs :</h2>
+            <ul>
+                <li>de s'adresser à tous,</li>
+                <li>
+                    de favoriser et de promouvoir le développement et la
+                    connaissance de l'abeille et de son habitat,
+                </li>
+                <li>
+                    de favoriser et de promouvoir le développement de
+                    l'apiculture à Olivet et environs.
+                </li>
+            </ul>
+            <h2>Ces objectifs sont atteints :</h2>
+            <ul>
+                <li>
+                    par de l'information, de la communication aux jeunes en
+                    particulier,
+                </li>
+                <li>
+                    par l'organisation et / ou la participation à des
+                    manifestations,
+                </li>
+                <li>
+                    par de la formation théorique et pratique à l'abeille et
+                    l'apiculture,
+                </li>
+                <li>
+                    par de la gestion de petits "ruchers associatifs" : accueil
+                    et exploitation des ruches de L'Abeille Olivetaine ou de
+                    ruches des membres de l'association,
+                </li>
+                <li>
+                    Par du conseil et de l'assistance aux nouveaux apiculteurs
+                    en particulier :
+                </li>
+                <ul>
+                    <li>
+                        Par la mise à disposition des « gros matériels » :
+                        extracteur, bac à désoperculer, chaudière à cire, petits
+                        outillages pour réalisation de cadres,
+                    </li>
+                    <li>Par la mise à dispositions de reines et essaims,</li>
+                    <li>Par la récupération d'essaims en ville,</li>
+                    <li>
+                        Par du « lobbying » auprès des collectivités, sociétés,
+                        associations et organismes divers.
+                    </li>
+                </ul>
+            </ul>
+
+            <div class="basic-container containerH">
+                <p>
+                    <a
+                        href="https://www.abeille-olivetaine.fr/page/2638170-bureau"
+                        >Découvrir les membres du bureau</a
+                    >
+                </p>
+                <p>
+                    <a
+                        href="https://www.abeille-olivetaine.fr/page/2638173-conseil-d-administration"
+                        >Découvrir les membres du conseil d'administration</a
+                    >
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <link rel="stylesheet" href="assets/css/partials/footer.css" />
+            <p>&copy; 2026 Abeille olivetaine. All rights reserved.</p>
+            <div>
+                <a href="./index.html">Accueil</a>
+                <a href="./pages/news.html">Les News</a>
+                <a href="./pages/recipes.html">Recettes</a>
+            </div>
+        </footer>
     </body>
 </html>

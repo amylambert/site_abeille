@@ -103,8 +103,11 @@
 }
 
 .news-action:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: var(
+        --fx-button-hover
+    ); /* Couleur de la DA (ex: #fca652) */
+    color: var(--fx-text-color); /* Texte foncé pour la lisibilité */
+    transform: scale(1.02); /* Petit bonus de dynamisme au clic */
 }
 
 /* Tablette et Desktop (2 colonnes) */

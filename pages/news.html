@@ -1,90 +1,151 @@
-<section class="news-section">
-    <div class="news-wrap">
-        <article class="news-card">
-            <div class="news-badge legislation">Législation</div>
-            <h3 class="news-title">Décret n° 2025-1377 du 29 décembre 2025</h3>
-            <p class="news-desc">
-                Précisant les modalités d'adoption du plan national et des plans
-                départementaux de lutte contre le frelon asiatique à pattes
-                jaunes.
-            </p>
-            <a
-                href="https://www.legifrance.gouv.fr/download/pdf?id=gwVEG1YigEmEk7G8bNpQh66LX11H3o62r_82R6Ql5Bg="
-                target="_blank"
-                rel="noopener noreferrer"
-                class="news-action"
-            >
-                Le décret <span aria-hidden="true">→</span>
-            </a>
-        </article>
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Abeille Olivetaine</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,900&display=swap"
+            rel="stylesheet"
+        />
 
-        <article class="news-card">
-            <div class="news-badge legislation">Législation</div>
-            <h3 class="news-title">LOI n° 2025-237 du 14 mars 2025</h3>
-            <p class="news-desc">
-                Visant à endiguer la prolifération du frelon asiatique et à
-                préserver la filière apicole.
-            </p>
-            <a
-                href="https://www.legifrance.gouv.fr/download/pdf?id=yFHk8BqGhhVbGD-csP_674iX_erjixoTD_Jy3AVXRFk="
-                target="_blank"
-                rel="noopener noreferrer"
-                class="news-action"
-            >
-                La loi <span aria-hidden="true">→</span>
-            </a>
-        </article>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/partials/header.css" />
+        <link rel="stylesheet" href="../assets/css/partials/footer.css" />
+        <link rel="stylesheet" href="../assets/css/news.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header-top">
+                <h1 id="logo">Abeille Olivetaine</h1>
+                <button id="burger-menu" aria-label="Ouvrir le menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav id="nav">
+                <a href="../index.html">Accueil</a>
+                <a href="./news.html">Les News</a>
+                <a href="./recipes.html">Recettes</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-        <article class="news-card">
-            <div class="news-badge pratique">Pratique</div>
-            <h3 class="news-title">
-                Quelques précautions pour la saison chaude..!
-            </h3>
-            <p class="news-desc">
-                Document informatif sur les bonnes pratiques et les points d'eau
-                pour vos abeilles lors des fortes chaleurs.
-            </p>
-            <a
-                href="https://www.abeille-olivetaine.fr/services/storage?type=document&id=5860333&secret=XGwUcgcVLNyaXMVrZhoLxOUidbekKHUp2fGbEbCh&timestamp=1750635170&download=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="news-action"
-            >
-                En savoir plus <span aria-hidden="true">→</span>
-            </a>
-        </article>
+            <script>
+                document.addEventListener("html-includes-done", () => {
+                    const burger = document.getElementById("burger-menu");
+                    const nav = document.getElementById("nav");
 
-        <article class="news-card">
-            <div class="news-badge pratique">Pratique</div>
-            <h3 class="news-title">Le livret de l'apiculteur</h3>
-            <p class="news-desc">
-                Livret destiné à ceux qui acquièrent leur première colonie, et à
-                ceux qui veulent se mettre à jour...
-            </p>
-            <a
-                href="https://www.abeille-olivetaine.fr/services/storage?type=document&id=5160490&secret=f7htO20DowlFAniyCDmEzLWhpZpneVYhbpnyoDWd&timestamp=1776760015&download=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="news-action"
-            >
-                Ouvrir le livret <span aria-hidden="true">→</span>
-            </a>
-        </article>
+                    if (burger && nav) {
+                        burger.addEventListener("click", () => {
+                            nav.classList.toggle("open");
+                            burger.classList.toggle("active");
+                        });
+                    }
+                });
+            </script>
+        </header>
 
-        <article class="news-card">
-            <div class="news-badge lecture">Lecture</div>
-            <h3 class="news-title">Article sur les ruches cheminées</h3>
-            <p class="news-desc">
-                Parution dans la revue « Les jardins du Loiret ».
-            </p>
-            <a
-                href="https://www.abeille-olivetaine.fr/services/storage?type=document&id=5160478&secret=R1joPb5rYqoMRvNZ57KLED2zof6q0CFfEu0I5hld&timestamp=1776760012&download=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="news-action"
-            >
-                Lire l'article <span aria-hidden="true">→</span>
-            </a>
-        </article>
-    </div>
-</section>
+        <section class="news-section">
+            <div class="news-wrap">
+                <article class="news-card">
+                    <div class="news-badge legislation">Législation</div>
+                    <h3 class="news-title">
+                        Décret n° 2025-1377 du 29 décembre 2025
+                    </h3>
+                    <p class="news-desc">
+                        Précisant les modalités d'adoption du plan national et
+                        des plans départementaux de lutte contre le frelon
+                        asiatique à pattes jaunes.
+                    </p>
+                    <a
+                        href="https://www.legifrance.gouv.fr/download/pdf?id=gwVEG1YigEmEk7G8bNpQh66LX11H3o62r_82R6Ql5Bg="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="news-action"
+                    >
+                        Le décret <span aria-hidden="true">→</span>
+                    </a>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-badge legislation">Législation</div>
+                    <h3 class="news-title">LOI n° 2025-237 du 14 mars 2025</h3>
+                    <p class="news-desc">
+                        Visant à endiguer la prolifération du frelon asiatique
+                        et à préserver la filière apicole.
+                    </p>
+                    <a
+                        href="https://www.legifrance.gouv.fr/download/pdf?id=yFHk8BqGhhVbGD-csP_674iX_erjixoTD_Jy3AVXRFk="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="news-action"
+                    >
+                        La loi <span aria-hidden="true">→</span>
+                    </a>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-badge pratique">Pratique</div>
+                    <h3 class="news-title">
+                        Quelques précautions pour la saison chaude..!
+                    </h3>
+                    <p class="news-desc">
+                        Document informatif sur les bonnes pratiques et les
+                        points d'eau pour vos abeilles lors des fortes chaleurs.
+                    </p>
+                    <a
+                        href="https://www.abeille-olivetaine.fr/services/storage?type=document&id=5860333&secret=XGwUcgcVLNyaXMVrZhoLxOUidbekKHUp2fGbEbCh&timestamp=1750635170&download=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="news-action"
+                    >
+                        En savoir plus <span aria-hidden="true">→</span>
+                    </a>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-badge pratique">Pratique</div>
+                    <h3 class="news-title">Le livret de l'apiculteur</h3>
+                    <p class="news-desc">
+                        Livret destiné à ceux qui acquièrent leur première
+                        colonie, et à ceux qui veulent se mettre à jour...
+                    </p>
+                    <a
+                        href="https://www.abeille-olivetaine.fr/services/storage?type=document&id=5160490&secret=f7htO20DowlFAniyCDmEzLWhpZpneVYhbpnyoDWd&timestamp=1776760015&download=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="news-action"
+                    >
+                        Ouvrir le livret <span aria-hidden="true">→</span>
+                    </a>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-badge lecture">Lecture</div>
+                    <h3 class="news-title">Article sur les ruches cheminées</h3>
+                    <p class="news-desc">
+                        Parution dans la revue « Les jardins du Loiret ».
+                    </p>
+                    <a
+                        href="https://www.abeille-olivetaine.fr/services/storage?type=document&id=5160478&secret=R1joPb5rYqoMRvNZ57KLED2zof6q0CFfEu0I5hld&timestamp=1776760012&download=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="news-action"
+                    >
+                        Lire l'article <span aria-hidden="true">→</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Abeille olivetaine. All rights reserved.</p>
+            <div>
+                <a href="../index.html">Accueil</a>
+                <a href="./news.html">Les News</a>
+                <a href="./recipes.html">Recettes</a>
+            </div>
+        </footer>
+    </body>
+</html>

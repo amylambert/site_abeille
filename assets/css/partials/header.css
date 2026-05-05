@@ -1,36 +1,67 @@
 header {
     background-color: var(--fx-header-color);
     width: 100%;
-    padding: var(--spacing-m) 5%; /* Marge dynamique 5% */
+    padding: var(--spacing-m) 5%;
     display: flex;
-    flex-direction: column; /* Mobile first: l'un sous l'autre */
-    align-items: center;
-    gap: var(--spacing-m);
+    flex-direction: column;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 header h1 {
     color: white;
     font-family: "Archivo", sans-serif;
-    font-size: clamp(1.5rem, 6vw, 2.2rem); /* Rétrécit sur petit écran */
-    text-align: center;
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
     margin: 0;
 }
 
-header nav {
+/* --- Style du Bouton Burger --- */
+#burger-menu {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--spacing-s);
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#burger-menu span {
     width: 100%;
+    height: 3px;
+    background-color: var(--fx-text-secondary-color);
+    border-radius: 3px;
+    transition: all 0.3s linear;
+}
+
+/* --- Menu de Navigation Mobile (Masqué par défaut) --- */
+header nav {
+    display: none; /* Masqué */
+    flex-direction: column;
+    width: 100%;
+    margin-top: var(--spacing-m);
+    gap: var(--spacing-s);
+    text-align: center;
+}
+
+header nav.open {
+    display: flex; /* Affiché via JS */
 }
 
 header nav a {
     color: var(--fx-text-secondary-color);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
-    padding: 8px 12px;
+    font-size: 1.1rem;
+    padding: 12px;
     border-radius: 8px;
     transition: all 0.2s ease;
 }
@@ -40,13 +71,31 @@ header nav a:hover {
     color: white;
 }
 
-/* Tablette et Desktop (Plus de 768px) */
+/* --- Responsive Ordinateur (> 768px) --- */
 @media (min-width: 768px) {
     header {
-        flex-direction: row; /* Côte à côte */
+        flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
-    header nav {
+
+    .header-top {
         width: auto;
+    }
+
+    #burger-menu {
+        display: none; /* On cache le burger sur PC */
+    }
+
+    header nav {
+        display: flex; /* On force l'affichage du menu */
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
     }
 }
