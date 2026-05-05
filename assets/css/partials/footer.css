@@ -1,0 +1,23 @@
+footer {
+    background-color: var(--fx-header-color);
+    width: 100vw;
+    padding: var(--spacing-m);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 100px;
+}
+
+footer > p {
+    color: white;
+}
+
+footer > div > a {
+    color: white;
+    text-decoration: none;
+    height: 30px;
+    align-items: center;
+}
