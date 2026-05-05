@@ -1,29 +1,39 @@
 footer {
     background-color: var(--fx-header-color);
-    width: 100vw;
-    padding: var(--spacing-m);
-
+    width: 100%;
+    padding: var(--spacing-xl) 5%;
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-
-    height: 300px;
+    gap: var(--spacing-l);
+    text-align: center;
 }
 
-footer > div {
+footer p {
+    color: var(--fx-text-secondary-color);
+    font-size: 0.85rem;
+}
+
+footer div {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-m);
 }
 
-footer > p {
-    color: white;
-}
-
-footer > div > a {
+footer div a {
     color: white;
     text-decoration: none;
-    height: 30px;
-    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    transition: all 0.2s ease;
+}
+
+footer div a:hover {
+    background-color: white;
+    color: var(--fx-header-color);
 }

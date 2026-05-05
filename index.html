@@ -2,28 +2,23 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <title>Abeille Olivetaine - temp</title>
-        <link rel="stylesheet" href="assets/css/style.css" />
-        <link rel="stylesheet" href="assets/css/news.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Abeille Olivetaine</title>
         <link
             href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,900&display=swap"
             rel="stylesheet"
         />
-        <script src="assets/js/IncludeHtml.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/news.css" />
+        <script src="assets/js/IncludeHtml.js" defer></script>
     </head>
     <body>
-        <header>
-            <include-html source="partials/header.html"></include-html>
-        </header>
+        <include-html source="partials/header.html"></include-html>
 
         <main>
-            <include-html source="pages/home.html"></include-html>
             <include-html source="pages/news.html"></include-html>
-            <include-html source="pages/recipes.html"></include-html>
         </main>
 
-        <footer>
-            <include-html source="partials/footer.html"></include-html>
-        </footer>
+        <include-html source="partials/footer.html"></include-html>
     </body>
 </html>
