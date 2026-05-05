@@ -1,68 +1,214 @@
 :root {
-    --fx-text-color: #03071e;
-    --fx-text-secondary-color: #faedbd;
-    --fx-background-color-primary: #fff2c9;
-    --fx-background-color-second: #ffffff; /* Cartes blanches pour moderniser */
-    --fx-shadow-box: #b08c5d;
-    --fx-background-color-border: #fca652;
-    --fx-header-color: #7c4a32;
-    --fx-button-colorBack: #7c4a32;
-    --fx-button-hover: #fca652;
+  --fx-text-color: #03071e;
+  --fx-text-secondary-color: #faedbd;
 
-    --font-size-xs: 0.75rem;
-    --font-size-s: 1rem;
-    --font-size-m: 1.25rem;
-    --font-size-l: 1.5rem;
-    --font-size-xl: 2rem;
+  --fx-background-color-primary: #fff2c9;
+  --fx-background-color-second: #ffd57e;
+  --fx-shadow-box: #b08c5d;
+  --fx-background-color-border: #fca652;
+  --fx-header-color: #7c4a32;
 
-    --spacing-s: 0.5rem;
-    --spacing-m: 1rem;
-    --spacing-l: 1.5rem;
-    --spacing-xl: 2rem;
+  --fx-button-colorBack: #7c4a32;
+  --fx-button-hover: #fca652;
+  --fx-text-button-color: #faedbd;
 
-    --border-radius: 12px;
-    --border-radius-btn: 50px; /* Boutons ovales modernes */
+  --font-size-xs: 0.75rem;
+  --font-size-s: 1rem;
+  --font-size-m: 1.25rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
 
-    --gap-s: 0.25rem;
-    --gap-m: 0.75rem;
-    --gap-l: 1rem;
-    --gap-xl: 1.5rem;
+  --spacing-s: 0.5rem;
+  --spacing-m: 1rem;
+  --spacing-l: 1.5rem;
+  --spacing-xl: 2rem;
+
+  --border-radius: 25px;
+  --border-radius-btn: 17px;
+
+  --gap-s: 0.25rem;
+  --gap-m: 0.75rem;
+  --gap-l: 1rem;
+  --gap-xl: 1.5rem;
+}
+
+/* ==========================================================================
+   RESET & GLOBALS
+   ========================================================================== */
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Empêche les éléments de déborder de l'écran */
-    font-family: "Noto Sans", sans-serif;
-    color: var(--fx-text-color);
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  color: var(--fx-text-color);
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--fx-background-color-primary); /* Fond Crème */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-}
-
-main {
-    flex: 1; /* Pousse le footer tout en bas */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--fx-background-color-primary);
+  max-width: 100vw;
+  min-height: 90vh;
 }
 
 h2 {
-    font-size: var(--font-size-l);
-}
-hr {
-    margin: 20px 0;
-    border: none;
-    border-top: 2px solid var(--fx-shadow-box);
+  font-size: var(--font-size-l);
 }
 
-/* Garde tes autres classes utilitaires (.card, .containerV, etc.) ici si besoin pour la page Home */
+a {
+  text-decoration: none;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+/* ==========================================================================
+   LAYOUT CONTAINERS
+   ========================================================================== */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: var(--font-size-m);
+  gap: var(--gap-l);
+  background: var(--fx-background-color-second);
+  padding: var(--spacing-m);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--fx-background-color-border);
+  max-width: 80vw;
+  margin: 0 auto var(--spacing-m);
+  align-content: center;
+  min-width: 50vw;
+}
+
+.basic-container {
+  background: var(--fx-background-color-second);
+  padding: var(--spacing-m);
+  border-radius: var(--border-radius);
+  border-top: 1px solid var(--fx-background-color-border);
+}
+
+.containerV {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap-l);
+  width: 100%;
+}
+
+.containerH {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-s);
+  width: 100%;
+}
+
+.space-btw {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.space-btw > h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.column-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+button {
+  padding: var(--spacing-m);
+  cursor: pointer;
+  background: var(--fx-button-colorBack);
+  border: none;
+  border-radius: var(--border-radius-btn);
+  margin: var(--spacing-m);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  /* scale: 1.05; */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  background-color: var(--fx-button-hover);
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+  transition: all 0.2s ease;
+}
+
+.containerH button {
+  font-size: var(--font-size-m);
+  /* font-weight: 700; */
+  margin: var(--spacing-m);
+}
+
+.containerH .buttonAdd {
+  font-size: var(--font-size-s);
+  padding: var(--spacing-m);
+}
+
+.secondary-btn {
+  background: var(--fx-background-color-border);
+}
+
+/* ==========================================================================
+   TABLES & LISTS
+   ========================================================================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing-s);
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  /* border-radius: var(--border-radius); */
+  padding: var(--spacing-s);
+  text-align: left;
+  font-size: var(--font-size-s);
+}
+
+thead {
+  background-color: var(--fx-background-color-primary);
+}
+
+li {
+  padding: var(--spacing-m);
+}
+
+/* ==========================================================================
+   HIDDEN
+   ========================================================================== */
+
 .hidden {
-    display: none;
+  display: none;
 }
