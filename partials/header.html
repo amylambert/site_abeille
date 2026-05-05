@@ -1,10 +1,62 @@
 <header>
-    <link href="/assets/css/partials/header.css" rel="stylesheet">
-    <h1 id="logo">Abeille Olivetaine</h1>
-    <nav id="nav">
-        <a href="/index.html">Accueil</a>
-        <a href="/pages/news.html">Les News</a>
-        <a href="/pages/recipes.html">Recettes</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <nav class="nav">
+    <div class="close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </svg>
+    </div>
+
+    <ul>
+      <h1 id="logo">Abeille Olivetaine</h1>
+      <li><a href="/index.html">Accueil</a></li>
+      <li><a href="/pages/news.html">Les News</a></li>
+      <li><a href="/pages/recipes.html">Recettes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="burger">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+      />
+    </svg>
+  </div>
 </header>
+<svg class="svg-defs hidden">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="mask-circle" cx="50%" cy="50%" r="150" fill="red" />
+    </clipPath>
+  </defs>
+</svg>
+<!-- Je déclare au navigateur qu'il doit utiliser la grammaire officielle du SVG (xmlns) pour comprendre les formes à l'intérieur -->
+<svg class="svg-background-layer" xmlns="http://www.w3.org/2000/svg">
+  <circle
+    id="spotlight-circle"
+    cx="50%"
+    cy="50%"
+    r="150"
+    fill="rgba(187, 67, 67, 0.695)"
+  />
+</svg>
