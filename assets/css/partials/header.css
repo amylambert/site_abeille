@@ -1,0 +1,25 @@
+header {
+    background-color: var(--fx-header-color);
+    width: 100vw;
+    padding: var(--spacing-m);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+header > h1 {
+    color: white;
+}
+
+header > nav > a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
